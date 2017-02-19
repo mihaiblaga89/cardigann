@@ -3,6 +3,7 @@ package torrentpotato
 import (
 	"encoding/json"
 	"net/http"
+	"time"
 
 	"github.com/cardigann/cardigann/torznab"
 )
@@ -18,6 +19,7 @@ type Result struct {
 	Size        int    `json:"size"`
 	Leechers    int    `json:"leechers"`
 	Seeders     int    `json:"seeders"`
+	PublishDate time.Time   `json:"publish_date"`
 }
 
 type Results struct {
@@ -49,6 +51,7 @@ func Output(w http.ResponseWriter, items []torznab.ResultItem) {
 			Size:        int(item.Size / 1024 / 1024),
 			Leechers:    item.Peers - item.Seeders,
 			Seeders:     item.Seeders,
+			PublishDate: item.PublishDate,
 		})
 	}
 
