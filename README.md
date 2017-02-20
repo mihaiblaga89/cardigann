@@ -225,7 +225,7 @@ setenv GOBIN ~/cardigann/bin
 
 ```
 go get github.com/Sirupsen/logrus
-go get github.com/cardigann/cardigann
+go get github.com/mihaiblaga89/cardigann
 go get gopkg.in/alecthomas/kingpin.v2
 go get github.com/equinox-io/equinox
 go get github.com/kardianos/service
@@ -236,14 +236,14 @@ go get -u github.com/c4milo/github-release
 #### Install the web part:
 
 ```
-cd ~/cardigann/src/github.com/cardigann/cardigann/web
+cd ~/cardigann/src/github.com/mihaiblaga89/cardigann/web
 npm install
 ```
 
 #### Finally you should be ready to compile: 
  
 ```
-cd ~/cardigann/src/github.com/cardigann/cardigann
+cd ~/cardigann/src/github.com/mihaiblaga89/cardigann
 make
 make build
 make install
@@ -255,7 +255,7 @@ If you get *esc: command not found* after `make build` than try to add *GOBIN* t
 PATH=$PATH:$GOBIN
 ```
 
-Otherwise you can change the Makefile in "~/cardigann/src/github.com/cardigann/cardigann" at line starting with **esc -o** and replace **esc** with its absolute path: **~/cardigann/bin/esc**
+Otherwise you can change the Makefile in "~/cardigann/src/github.com/mihaiblaga89/cardigann" at line starting with **esc -o** and replace **esc** with its absolute path: **~/cardigann/bin/esc**
 
 #### Start the server!
 
