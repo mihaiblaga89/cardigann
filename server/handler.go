@@ -227,7 +227,7 @@ func (h *handler) torznabHandler(w http.ResponseWriter, r *http.Request) {
 	case "caps":
 		indexer.Capabilities().ServeHTTP(w, r)
 
-	case "search", "tvsearch", "tv-search":
+	case "search", "tvsearch", "tv-search", "movie":
 		feed, err := h.torznabSearch(r, indexer, indexerID)
 		if err != nil {
 			torznab.Error(w, err.Error(), torznab.ErrUnknownError)
